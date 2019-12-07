@@ -1,0 +1,86 @@
+body 
+	background: $dark
+	overflow-y: auto
+
+
+.main-title
+	position: relative
+
+.header-flex	
+	display: flex
+	height: 100%
+	width: 100%
+	position: fixed
+	top: -2rem
+	left: 40%
+
+.flex-center
+	margin: auto
+
+.header-composition
+	text-align: center
+	position: relative
+
+	.description
+		margin-top: 50px
+		text-align: left
+		font-size: 16px
+		font-style: italic
+		color: $gray
+
+	.butt
+		margin-top: 20px
+
+.welcome
+	p
+		font-size: 16px
+		display: flex
+		align-items: center
+		white-space: nowrap
+		color: $gray
+		margin: 0
+		margin-bottom: -10px
+
+		span
+			margin: 0 10px
+		&::before, &::after
+			content: ''
+			height: 1px
+			width: 100%
+			position: relative
+			background-color: $light
+			display: inline-block
+
+	.h1
+		font-weight: 100
+		font-size: 50px
+		margin: 0
+		color: $light
+		line-height: 1.6
+		border-bottom: 1px solid #fff
+		white-space: nowrap
+		margin-top: 20px
+
+
+
+.footer-section
+	position: relative
+
+	.languages
+		left: 65%
+		bottom: 2rem
+		position: fixed
+		display: flex
+		font-size: 13px
+		font-weight: 700
+	
+		.active
+			color: $light
+
+		.english
+			margin-right: 10px
+			cursor: pointer
+
+		.russian
+			cursor: pointer
+	

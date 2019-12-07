@@ -1,0 +1,115 @@
+@import './vars.sass'
+
+
+/*.login
+	background: #040404
+	position: relative
+	width: 100%
+	background: #040404
+	text-transform: lowercase
+	font-family: BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif*/
+
+.form
+	font-family: 'Space Mono', monospace;
+	margin-top: -100px
+	max-width: 500px
+	width: 500px
+	display: flex
+	flex-direction: column
+	align-items: center
+	position: relative
+	padding: 1rem 0 0 0
+	
+	&__title
+		display: block
+		color: #fefefe
+		font-size: 1.3rem
+		text-align: left
+		font-weight: bold
+		align-self: flex-start
+		padding: 0 0 1.5rem
+		opacity: 0.8
+
+	&__item
+		width: 100%
+		position: relative
+		display: flex
+		flex-direction: column
+		margin: 0 0 1.5rem 0
+
+	&-control 
+		display: block
+		font-size: 1rem
+		padding: 1.1rem
+		width: 100%
+		border: 0
+		background: #131313
+		position: relative
+		font-weight: bold
+		color: #fefefe
+
+		&:focus
+			outline: none
+
+	&__input 
+		display: block
+		font-size: 1rem
+		padding: 1.1rem
+		width: 100%
+		border: 0
+		background: #131313
+		position: relative
+		font-weight: bold
+		/*color: #fff*/
+
+
+	.butt
+		padding: .6rem 2rem
+		border: 1px solid rgba(255, 255, 255, 0.2)
+	    font-weight: bold
+		right: 0
+		position: absolute
+
+		&:focus 
+			outline: none
+
+		&:hover
+			background: $accent
+
+	.form-check 
+		position: absolute
+		left: 10px
+
+		div
+			margin-top: -37px
+			margin-left: 40px
+			font-size: 17px
+			color: rgba(255, 255, 255, 0.3)
+
+.content 
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 0 auto
+	min-height: 100vh
+	flex-wrap: wrap
+
+
+.to-login
+	position: absolute
+	bottom: 30px
+	display: flex
+	font-size: 18px
+	color: rgba($link-color, .85)
+
+	a
+		margin-top: 17px
+		margin-left: 30px
+		font-weight: 500
+
+@media screen and (max-width: 55em) 
+	.form 
+		max-width: none
+		width: 80%
+

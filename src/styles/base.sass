@@ -1,0 +1,71 @@
+*
+	box-sizing: border-box
+	
+	&:before, &:after
+		box-sizing: border-box
+
+html, body 
+	height: 100%
+
+body 
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: Arial, sans-serif;
+	overflow-x: hidden
+	opacity: 1
+	color: #333
+	background: $dark
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section 
+  display: block
+
+.container 
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+
+
+@media (min-width: 576px) 
+  .container 
+    max-width: 540px
+  
+
+
+@media (min-width: 768px) 
+  .container 
+    max-width: 720px
+  
+
+
+@media (min-width: 992px) 
+  .container 
+    max-width: 960px
+  
+
+
+@media (min-width: 1200px) 
+  .container 
+    max-width: 1140px
+  
+
+.row 
+  display: flex
+  flex-wrap: wrap
+  margin-right: -15px
+  margin-left: -15px
+
+.col-sm-5
+  position: relative
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+
+@media (min-width: 576px) 
+  .col-sm-5 
+    flex: 0 0 41.666667%
+    max-width: 41.666667%
+

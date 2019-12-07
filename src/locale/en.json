@@ -1,0 +1,52 @@
+{
+  "title": "Okko Diablo",
+  "type": "Overdrive",
+
+  "intro": {
+    "uno": "OKKO Diablo - damn cool pedal. It is a Low - Mid Gain overdrive with a booster. Perfect for fans of not mediocre, diverse sound.",
+    "dos": "The pedal is very sensitive to the dynamics, it retains the whole character of your instrument and perfectly emphasizes your style of playing and sounding (if you have one, of course). The pedal is very controllable and carries on board a lot of useful twists, which allows you to perfectly adjust it for use with almost any instrument and amplifier. And on it you can role a completely different sound, of course. So different that sometimes I can’t even believe that the same pedal sounds."
+  },
+
+  "settings": {
+    "uno": "Controls:",
+    "set_one": "GO! – button to activate the effect",
+    "set_two": "FEED – adjusts the gain of the preamplifier as well as the low frequencies of the input signal",
+    "set_three": "BODY – adjusts midrange and signal compression",
+    "set_four": "GAIN – regulates the amount of overload",
+    "set_five": "TONE – adjusts tone",
+    "set_six": "LEVEL – adjusts the volume",
+    "set_seven": "«+» – button to activate boost",
+    "set_eight": "LEVEL «+» – adjusts the amount of boost",
+    "dos": "Internal:",
+    "set__one" : "PRESENCE – adjusts high frequencies",
+    "set__two" : "BASS – adjusts the lower middle of the frequencies",
+    "set__three" : "TONE «+» – adjusts the tone of boost",
+    "set__four" : "GAIN «+» – adjusts the amount of boost",
+    "set__five" : "BASS «+» – adjusts the low frequency boost"
+  },
+
+  "controls": {
+    "uno": "In addition to the standard Gain, Tone and Level, the pedal has some very interesting settings. For example, the Feed Twist adjusts the number of bass frequencies in the input signal. Yes, exactly in the input, the raw signal. What for? Here is why: you must have encountered a problem when you disturb a beautiful, velvety clear sound with a lot of bottoms, and then go to overdrive in the middle of the song, and it starts to sound soapy and not readable. So, thanks to this twist, such a stupid problem is solved in an elegant way. Even on the bold, nekovy pickup you can achieve a clear and transparent overdrive sound. (With any clear sound settings, of course.)",
+    "dos": "The '+' controls the second gain channel, which is activated by the corresponding foot switch. This knob works in conjunction with GAIN, so if it's already at its maximum, activating “+” will not add more distortion to you, but will add more volume and meat to the sound."
+  },
+
+  "notice": {
+    "uno": "Before starting, I should make a small note: There is also a Headroom switch in the original pedal.",
+    "dos": "In fact, this is a voltage doubler, it allows you to feed the pedal with 18 volts instead of the standard 9. That gives an even greater volume level, an extension of the frequency range, plus more dynamics and less compression. I made WITHOUT this feature, because at the time of the assembly I did not find the complete scheme. The archive will have another layout, already with the implementation of this function."
+  },
+
+  "schema": {
+    "uno": "So, according to the scheme:",
+    "dos": "7 transistors J201, true bypass in the amount of 2 pieces, on the effect itself and booster, respectively. Standard power - 9V. There are also 5 trimmers on the diagram, they need to be configured before installing the board in the case. I have everything in the middle, if you unscrew the Gain + to the maximum, then the booster will turn into an easy overload, here, as they say, to taste. You should also pay attention to the potentiometers, as you can see 3 of them are logarithmic, I put everything linear, and ... nothing, everything works fine."
+  },
+
+  "download": {
+    "uno": "Download archive"
+  },
+
+
+
+
+  "section_description" : "Lorem ipsum is for dolor sit amet, cogito consectetur adipisicing elit. A et beatae, at assumenda incidunt perferendis eaque, voluptatem culpa omnis laboriosam."
+
+}
