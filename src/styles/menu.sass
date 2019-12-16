@@ -1,0 +1,74 @@
+@import './vars.sass'
+
+.menu
+  height: 30px
+  width: 30px
+  position: absolute
+  top: 8%
+  right: 3%
+  transform: translate(-50%,-50%)
+  cursor: pointer
+  z-index: 1  
+
+.hambergerIcon
+  height: 2.5px
+  width: 25px
+  position: absolute
+  top: 50% 
+  left: 50% 
+  border-radius: 50px 
+  background-color: $gray
+  transform: translate(-50%,-50%) rotate(0deg) 
+  transition: all ease 0.5s 
+  
+  &::before, &::after
+    content: "" 
+    position: absolute 
+    height: inherit 
+    border-radius: inherit 
+    background-color: inherit 
+    margin: auto 
+    width: 50% 
+    transition: all ease 0.5s 
+  
+  &::before
+    top: -6px 
+    left: 0 
+    transform-origin: left 
+  
+  &::after
+    bottom: -6px 
+    right: 0 
+    transform-origin: right 
+  
+
+.open
+  transform: translate(-50%,-50%) rotate(-45deg) 
+  width: 20px
+  height: 2px
+
+  &::before
+    top: 0 
+    transform: translateX(100%) rotate(-90deg) 
+  
+  &::after
+    bottom: 0 
+    transform: translateX(-100%) rotate(-90deg) 
+
+
+  
+  
+    .menu::before
+      content: "close"
+      color: $gray
+      margin-left: -60px
+      top: 10px
+      position: absolute
+
+  
+    .menu::after 
+      content: "___"
+      top: 3px
+      position: absolute
+      color: $gray
+      margin-left: -15px  
