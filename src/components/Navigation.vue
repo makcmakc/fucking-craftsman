@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<div class="navigation">
-			<a class="button prev" v-on:click="delta(-1)"></a>
-			<a class="button next" v-on:click="delta(1)"></a>
+			<a class="button prev" ></a>
+			<a class="button next" ></a>
 		</div>		
 	</div>
 </template>
@@ -10,12 +10,7 @@
 
 <script>
 	export default {
-		name: 'navigation',
-		methods: {
-		//	delta (d){
-		//		this.nowIndex = (this.nowIndex + d + this.works.length) % this.works.length
-		//	}
-		}		
+		name: 'navigation',		
 	};
 </script>
 

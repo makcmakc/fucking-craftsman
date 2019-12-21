@@ -14,6 +14,10 @@ import 'firebase/database'
 
 import config from './firebase/config'
 
+import EasySlider from 'vue-easy-slider'
+
+Vue.use(EasySlider)
+
 
 Vue.config.productionTip = false
 
