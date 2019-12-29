@@ -64,6 +64,44 @@ body
 
 
 
+
+.navigation 
+	.next
+		position: absolute
+		top: 47%
+		right: 15px
+
+	.prev
+		position: absolute
+		top: 47%
+		left: 17px
+
+	.button
+		border: 2px solid #fff
+		background-color: transparent
+		border: 1.5px solid rgba(255, 255, 255, 0.5)
+		border-radius: 50%
+		cursor: pointer
+		transition: all 0.4s
+		width: 50px
+		height: 50px
+		outline: none
+		z-index: 99
+
+		&:hover
+			border-top: 1px solid #000
+			border-bottom: 1px solid #000
+			box-shadow: 0 0 0 0.1rem rgba(255,197,39, 0.9)
+			animation: rotate 0.8s linear infinite
+			transition: all 0.4s
+
+@keyframes rotate
+	100%
+		transform: rotate(360deg)
+		
+
+
+
 .footer-section
 	position: relative
 
@@ -78,18 +116,22 @@ body
 		.active
 			color: $light
 
-		.english
-			margin-right: 10px
+		.language
 			cursor: pointer
+			z-index: 99
 
-		.russian
-			cursor: pointer
+			&:nth-child(1)
+				margin-right: 10px
 
 	.switch-sound
+		cursor: pointer
+		z-index: 99
 		width: 40px
-		height: 20px
+		height: 22px
 		background: #fff
 		position: fixed
 		bottom: 2.1rem
 		left: 72%			
-	
+		border-radius: 2px
+		background: transparent
+		border: 1px solid rgba(255, 255, 255, .4)

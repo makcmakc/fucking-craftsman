@@ -7,7 +7,7 @@
 			:duration="2000"
 			:speed="1500"
 			:autoplay="false"
-			:control-btn="true"
+			:control-btn="false"
 			:indicators="false"
 		>
 
@@ -38,23 +38,28 @@
 				</div>
 			</div>
 
+			<div class="navigation">
+				<a class="button prev" v-on:click="moveFromIndex(index)"></a>
+				<a class="button next" v-on:click="moveToIndex(index)"></a>
+			</div>						
+
 		</SliderItem>		
 	
 		</Slider>
+
+
 
 		<Footer />
 
 		<router-view/>
 		<Menu />
 
-		<Navigation />
 	</div>
 </template>
 
 
 <script>
 import Menu from '@/components/Menu.vue'
-import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 import { Slider, SliderItem } from "vue-easy-slider";
@@ -63,7 +68,7 @@ import { Slider, SliderItem } from "vue-easy-slider";
 export default {
 	name: 'home',
 	data:() => ({
-		sliderValue: 3,
+		sliderValue: 0,
 		sections: [
 			{
 				sectionTitle: "Morning Glory",
@@ -82,30 +87,22 @@ export default {
 
 	components: {
 		Menu,
-		Navigation,
 		Footer,
 		Slider,
 		SliderItem
-	}
+	},
+	methods: {
+		moveToIndex(index) {
+			this.sliderValue = ++index
+		},
+		moveFromIndex(index) {
+			this.sliderValue = --index
+		}
+	}	
 };
 </script>
 
 <style lang="sass">
 .slider
-	height: 100vh
+	height: 100vh !important
 </style>
-
-
-<!--
-/*methods: {
-setLocale(locale) {
-import(`../locale/${locale}.json`).then(data => {
-this.$i18n.setLocaleMessage(locale, data)
-this.$i18n.locale = locale
-//console.log(data)
-
-@click="setLocale('en')"
-@click="setLocale('ru')"
-})
-},
-}*/-->
