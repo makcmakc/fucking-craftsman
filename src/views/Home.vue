@@ -47,8 +47,6 @@
 	
 		</Slider>
 
-
-
 		<Footer />
 
 		<router-view/>
@@ -59,8 +57,8 @@
 
 
 <script>
-import Menu from '@/components/Menu.vue'
-import Footer from '@/components/Footer'
+import Menu from '@/components/M_enu.vue'
+import Footer from '@/components/F_ooter'
 
 import { Slider, SliderItem } from "vue-easy-slider";
 
@@ -96,9 +94,9 @@ export default {
 			this.sliderValue = ++index
 		},
 		moveFromIndex(index) {
-			this.sliderValue = --index
+			this.sliderValue = --index		
 		}
-	}	
+	}
 };
 </script>
 

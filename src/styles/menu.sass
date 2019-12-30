@@ -20,7 +20,8 @@
   background-color: $gray
   transform: translate(-50%,-50%) rotate(0deg) 
   transition: all ease 0.5s 
-  
+
+
   &::before, &::after
     content: "" 
     position: absolute 
@@ -53,22 +54,22 @@
   
   &::after
     bottom: 0 
-    transform: translateX(-100%) rotate(-90deg) 
+    transform: translateX(-100%) rotate(-90deg)     
+        
+  .close::before
+    content: "close"
+    color: $gray
+    margin-left: -50px
+    top: -55px
+    position: absolute
+    transform: rotate(45deg) 
+    opacity: 0
 
-
-  
-  
-    .menu::before
-      content: "close"
-      color: $gray
-      margin-left: -60px
-      top: 10px
-      position: absolute
-
-  
-    .menu::after 
-      content: "___"
-      top: 3px
-      position: absolute
-      color: $gray
-      margin-left: -15px  
+  .close::after 
+    content: "___"
+    top: -35px
+    position: absolute
+    color: $gray
+    margin-left: -15px  
+    transform: rotate(45deg) 
+    opacity: 0
