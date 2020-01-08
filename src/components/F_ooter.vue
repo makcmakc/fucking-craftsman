@@ -10,14 +10,12 @@
 							<div 
 								class="english language" 
 								v-bind:class="{ active: !active}"
-								>
-								EN
+								>EN
 							</div>
 							<div 
 								class="russian language" 
 								v-bind:class="{ active: active}"
-								>
-								RU
+								>RU
 							</div>
 						</div>
 					</div>
@@ -29,7 +27,6 @@
 
 <script>
 	import SwitchSound from '@/components/Witch'
-	import '@/utils/switch.js'
 
 	export default {
 		name: 'f-ooter',
@@ -38,6 +35,9 @@
 			return {
 				active: true
 			}
+		},
+		methods: {
+
 		}
 	};
 </script>

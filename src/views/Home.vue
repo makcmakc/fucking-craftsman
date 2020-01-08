@@ -4,8 +4,8 @@
 		<Slider     
 			animation="fade"
 			v-model="sliderValue"
-			:duration="2000"
-			:speed="1500"
+			:duration="1000"
+			:speed="1000"
 			:autoplay="false"
 			:control-btn="false"
 			:indicators="false"
@@ -79,7 +79,11 @@ export default {
 			{
 				sectionTitle: "About",
 				sectionDescription: "Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имеет о семь его великий напоивший текстов! По всей, своих, собрал.",				
-			}
+			},
+			{
+				sectionTitle: "Service",
+				sectionDescription: "В разработке                  ",				
+			}			
 		]
 	}),
 
@@ -96,6 +100,18 @@ export default {
 		moveFromIndex(index) {
 			this.sliderValue = --index		
 		}
+	},
+	computed() {
+		if (this.sliderValue === 0) {
+			this.left = false
+		} else {
+			this.left = true
+		}
+		if (this.sliderValue === 3) {
+			this.right = false
+		} else {
+			this.right = true
+		}		
 	}
 };
 </script>
