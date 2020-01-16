@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store/'
 
-import { i18n } from './utils/i18n'
+//import { i18n } from './utils/i18n'
 import VueToasted from 'vue-toasted'
 import messagePlugin from '@/utils/message.plugin'
 import Vuelidate from 'vuelidate'
@@ -46,7 +46,7 @@ firebase.auth().onAuthStateChanged(() => {
     app = new Vue({
       router,
       store,
-      i18n,
+     // i18n,
       render: h => h(App)
     }).$mount('#app')	
   }

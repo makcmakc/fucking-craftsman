@@ -26,11 +26,11 @@ import Loader from '@/components/api/Loader.vue'
 <style lang="sass" scoped>
 .sidebar
 	border-right: 1px solid rgba(255, 255, 255, 0.2)
-	position: absolute;
+	position: absolute
 
 .project-title
 	h2
-		position: fixed;
+		position: fixed
 		margin: auto 48%
 		width: 100% 
 		color: #FF6901

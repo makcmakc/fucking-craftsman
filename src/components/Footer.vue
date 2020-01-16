@@ -19,6 +19,7 @@
 							</div>
 						</div>
 					</div>
+					
 				</div>
 			</div>
 		</footer>
@@ -26,11 +27,11 @@
 
 
 <script>
-	import SwitchSound from '@/components/Witch'
+	import SwitchSound from '@/components/Switch'
 
 	export default {
 		name: 'f-ooter',
-		components: {SwitchSound},
+		components: { SwitchSound },
 		data() {
 			return {
 				active: true

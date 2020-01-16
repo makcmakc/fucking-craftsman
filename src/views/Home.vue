@@ -10,45 +10,41 @@
 			:control-btn="false"
 			:indicators="false"
 		>
+			<SliderItem
+				v-for="(i, index) in sections"
+				:key="index"
+			>
+				<div class="main-title">
+					<div class="header-flex">
+						<div class="flex-center">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-5 ">
+										<div class="header-composition">
+											<div class="welcome">
+												<p><span>fucking craftsman</span></p>
+												<h1 class="h1">{{ i.sectionTitle }}</h1>
+											</div>
 
-		<SliderItem
-			v-for="(i, index) in sections"
-			:key="index"
-		>
-			<div class="main-title">
-				<div class="header-flex">
-					<div class="flex-center">
-						<div class="container">
-							<div class="row">
-								<div class="col-sm-5 ">
-									<div class="header-composition">
-										<div class="welcome">
-											<p><span>fucking craftsman</span></p>
-											<h1 class="h1">{{ i.sectionTitle }}</h1>
+											<p class="description">{{ i.sectionDescription }}</p>
+
+											<router-link to="/morning-glory" class="butt">Enter</router-link>
 										</div>
-
-										<p class="description">{{ i.sectionDescription }}</p>
-
-										<router-link to="/morning-glory" class="butt">Enter</router-link>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="navigation">
-				<a class="button prev" v-on:click="moveFromIndex(index)"></a>
-				<a class="button next" v-on:click="moveToIndex(index)"></a>
-			</div>						
-
-		</SliderItem>		
-	
+				<div class="navigation">
+					<a class="button prev" v-on:click="moveFromIndex(index)"></a>
+					<a class="button next" v-on:click="moveToIndex(index)"></a>
+				</div>						
+			</SliderItem>		
 		</Slider>
 
 		<Footer />
-
 		<router-view/>
 		<Menu />
 
@@ -57,36 +53,19 @@
 
 
 <script>
-import Menu from '@/components/M_enu.vue'
-import Footer from '@/components/F_ooter'
-
+import Menu from '@/components/Menu.vue'
+import Footer from '@/components/Footer'
 import { Slider, SliderItem } from "vue-easy-slider";
 
+
+const fakeData = require ('../fakeData.json')
 
 export default {
 	name: 'home',
 	data:() => ({
 		sliderValue: 0,
-		sections: [
-			{
-				sectionTitle: "Morning Glory",
-				sectionDescription: "Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имеет о семь его великий напоивший текстов! По всей, своих, собрал."
-			},
-			{
-				sectionTitle: "Blog",
-				sectionDescription: "Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имеет о семь его великий напоивший текстов! По всей, своих, собрал.",
-			},
-			{
-				sectionTitle: "About",
-				sectionDescription: "Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имеет о семь его великий напоивший текстов! По всей, своих, собрал.",				
-			},
-			{
-				sectionTitle: "Service",
-				sectionDescription: "В разработке                  ",				
-			}			
-		]
+		sections: fakeData.sections
 	}),
-
 	components: {
 		Menu,
 		Footer,

@@ -1,6 +1,6 @@
 <template>
-	<div class="witch__sound">
-		<div class="witch__btn">
+	<div class="switch__sound">
+		<div class="switch__btn">
 			<canvas id="canvas" width="40" height="20"></canvas>
 		</div>
 	</div>
@@ -68,9 +68,9 @@
 
 
 <style lang="sass">
-.witch__sound
+.switch__sound
 	cursor: pointer
-	z-index: 99
+	z-index: 999
 	width: 40px
 	height: 22px
 	background: #fff
