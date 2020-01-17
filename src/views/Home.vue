@@ -28,7 +28,13 @@
 
 											<p class="description">{{ i.sectionDescription }}</p>
 
-											<router-link to="/morning-glory" class="butt">Enter</router-link>
+											<router-link
+												:key="i.url"
+												:to="i.url"
+												class="butt"
+											>
+											Enter
+											</router-link>
 										</div>
 									</div>
 								</div>
@@ -38,8 +44,8 @@
 				</div>
 
 				<div class="navigation">
-					<a class="button prev" v-on:click="moveFromIndex(index)"></a>
-					<a class="button next" v-on:click="moveToIndex(index)"></a>
+					<a v-if="sliderValue >= 1" class="button prev" v-on:click="moveFromIndex(index)"></a>
+					<a v-if="sliderValue !== 3" class="button next" v-on:click="moveToIndex(index)"></a>
 				</div>						
 			</SliderItem>		
 		</Slider>
@@ -79,18 +85,6 @@ export default {
 		moveFromIndex(index) {
 			this.sliderValue = --index		
 		}
-	},
-	computed() {
-		if (this.sliderValue === 0) {
-			this.left = false
-		} else {
-			this.left = true
-		}
-		if (this.sliderValue === 3) {
-			this.right = false
-		} else {
-			this.right = true
-		}		
 	}
 };
 </script>

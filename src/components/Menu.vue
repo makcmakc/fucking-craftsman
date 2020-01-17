@@ -7,9 +7,7 @@
 						v-for="link in links"
 						:key="link.url"
 						tag="li"
-						active-class="active"
 						:to="link.url"
-						:exact="link.exact"
 					>
 					<a>{{link.title}}</a>
 				</router-link>
@@ -21,10 +19,6 @@
 			<div class="hambergerIcon" v-bind:class="{ open: open}"></div>
 			<div class="close"></div>
 		</div>	
-
-		
-
-
 		
 	</div>	
 </template>
