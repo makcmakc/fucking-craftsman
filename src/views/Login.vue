@@ -2,6 +2,13 @@
 	<div>
 
 		<main>
+
+			<div class="frame">
+				<h1 class="frame__title">
+					<router-link to="/">Fucking Craftsman</router-link>
+				</h1>
+			</div>
+
 			<div class="content">
 				<form class="form" @submit.prevent="submitHandler">
 
@@ -18,9 +25,6 @@
 										v-model.trim="email"
 										:class="{'is-invalid':$v.email.$error, 'is-valid':!$v.email.$invalid }">
 
-									<!--<div class="styled-input__placeholder">
-										<span class="styled-input__placeholder-text">Your Email</span>
-									</div>-->
 									<div class="styled-input__circle"></div>
 
 									<div class="valid-feedback">Your Email is vaild!</div>	
@@ -44,9 +48,6 @@
 										v-model.trim="$v.password.$model"
 										:class="{'is-invalid':$v.password.$error, 'is-valid':!$v.password.$invalid }">
 
-									<!--<div class="styled-input__placeholder">
-										<span class="styled-input__placeholder-text">Password</span>
-									</div>-->
 									<div class="styled-input__circle"></div>
 
 									<div class="valid-feedback">Your Password is vaild!</div>
@@ -152,24 +153,4 @@ import messages from '@/utils/messages'
 
 
 <style lang="sass"></style>
-
-
-<!--
-	// To SQLLite backend
-	import AuthenticationService from '@/services/auth'
-
-		methods: {
-			async submitHandler() {
-				try {
-					await AuthenticationService.login({
-						email: this.email,
-						password: this.password
-					})
-				} catch (error) {
-					this.error = error.response.data.error
-				}
-			}
-		}
--->
-
 

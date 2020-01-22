@@ -13,7 +13,7 @@
 			sound: true
 		}),
 		mounted() {
-			let wave = new SineWaves({
+			new SineWaves({
 			el: document.getElementById('wave'),
 			speed: 4,
 			width: '50px',

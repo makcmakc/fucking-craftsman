@@ -73,6 +73,7 @@ export default new Router({
       path: '/tube-mic',
       name: 'tube-mic',
       component: () => import('./views/Projects/TubeMic.vue')
-    },            
+    },    
+    /* - Projects - */        
   ]
 })
