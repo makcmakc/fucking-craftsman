@@ -20,7 +20,7 @@ import SideBar from '@/components/api/SideBar.vue'
 		data:() => ({
 			//project: fakeData.projects
 		}),		
-		 mounted() {
+		mounted() {
 
 		},
 		components: {

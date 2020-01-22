@@ -49,7 +49,8 @@
 				} else {
 					overlay.style.opacity = '0' 	
 					overlay.style.zIndex = 0
-				}			
+				}    
+
 			},
 		}
 
