@@ -5,27 +5,22 @@
 
 		<div class="images"></div>
 
-		<!--<Article />-->
+		<Article v-bind:project="project" />
+
 	</div>
 </template>
 
 
 <script>
-import SideBar from '@/components/api/SideBar.vue'
-//import Article from '@/components/api/Article'
-
-//const fakeData = require ('../../fakeData.json')
-
+import SideBar from '@/components/project/SideBar.vue'
+import Article from '@/components/project/Article'
 	export default {
-		data:() => ({
-			//project: fakeData.projects
-		}),		
-		mounted() {
-
-		},
+		data: () => ({
+			project: 'OkkoDiablo'
+		}),	
 		components: {
 			SideBar,
-			//Article
+			Article
 		}
 	};
 </script>

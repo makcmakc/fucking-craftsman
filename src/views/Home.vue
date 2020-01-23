@@ -1,6 +1,8 @@
 <template>
 	<div class="home">
 
+		<Theme />
+
 		<Slider     
 			animation="fade"
 			v-model="sliderValue"
@@ -61,6 +63,7 @@
 <script>
 import Menu from '@/components/Menu.vue'
 import Footer from '@/components/Footer'
+import Theme from '@/components/Theme'
 import { Slider, SliderItem } from "vue-easy-slider";
 
 
@@ -76,7 +79,8 @@ export default {
 		Menu,
 		Footer,
 		Slider,
-		SliderItem
+		SliderItem,
+		Theme
 	},
 	methods: {
 		moveToIndex(index) {

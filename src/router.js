@@ -39,6 +39,11 @@ export default new Router({
       component: () => import('./views/Profile.vue')
     }, 
     {
+      path: '/remicore',
+      name: 'remicore',
+      component: () => import('./views/Remicore.vue')
+    },    
+    {
       path: '/blog',
       name: 'blog',
       component: () => import('./views/Blog.vue')

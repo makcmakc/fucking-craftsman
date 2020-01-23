@@ -10,18 +10,16 @@
 
 
 <script>
-import SideBar from '@/components/api/SideBar.vue'
-import Article from '@/components/api/Article.vue'
+import SideBar from '@/components/project/SideBar.vue'
+import Article from '@/components/project/Article.vue'
 
 	export default {	
+		data:() => ({
+			project: 'FuzzFactory'
+		}),			
 		components: {
 			SideBar,
 			Article
-		},
-		data() {
-			return {
-				
-			}
 		}			
 	};
 </script>

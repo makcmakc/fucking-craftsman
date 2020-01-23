@@ -15,17 +15,17 @@
 		mounted() {
 			new SineWaves({
 			el: document.getElementById('wave'),
-			speed: 4,
+			speed: 3,
 			width: '50px',
 			height: '30px',
 			wavesWidth: '95%',
 			ease: 'SineInOut',
 			waves: [
 				{
-					timeModifier: 1,
+					timeModifier: 2,
 					lineWidth: 1,
 					amplitude: 12,
-					wavelength: 5,
+					wavelength: 3,
 					segmentLength: 1
 				},
 			],
@@ -67,7 +67,7 @@
 	height: 30px
 	background: #fff
 	position: fixed
-	bottom: 1.8rem
+	bottom: 1.7rem
 	left: 72%			
 	border-radius: 2px
 	background: transparent

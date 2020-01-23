@@ -8,8 +8,8 @@
 
 
 <script>
-import SideBar from '@/components/api/SideBar.vue'
-import Loader from '@/components/api/Loader.vue'
+import SideBar from '@/components/project/SideBar.vue'
+import Loader from '@/components/project/Loader.vue'
 	export default {
 		components: {
 			SideBar,

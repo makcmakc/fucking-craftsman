@@ -1,7 +1,7 @@
 <template>
     <div class="article">
 
-      <div class="headline">
+      <div class="headline">  
         <h2>{{ project.main_title }}</h2>
         <h3>{{ project.type }}</h3>    
       </div>
@@ -50,8 +50,24 @@
 
 
 <script>
+import fakeData from'@/fakeData.js'
+  
 	export default {
-    props: ['project']
+    props: ['project'],
+    data:() => ({
+      
+    }),
+    mounted() {
+
+    },       
+    created() {
+      this.$store.dispatch('loadProjects', fakeData.projects)
+    },
+    computed: {
+      projects() {
+        return this.$store.getters.getProjects
+      }
+    },  
 	};
 </script>
 
