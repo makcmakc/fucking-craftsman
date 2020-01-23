@@ -1,2 +1,2 @@
 # fucking-craftsman
- fucking-craftsman project aplication
+My WEB Aplication - Blog
