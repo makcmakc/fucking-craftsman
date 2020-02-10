@@ -32,10 +32,12 @@
 @import '@/styles/vars.sass'
 
 .sidebar
-	position: fixed
+	position: absolute
 	width: 40px
 	height: 100vh
 	border-right: 1px solid $gray
+	left: 0
+	top: 0
 
 	ul
 		position: relative
@@ -45,8 +47,9 @@
 			width: 40px
 			height: 50px
 			border-bottom: 1px solid $gray
-			cursor: pointer
 			padding: 10px 10px
+
+
 
 
 

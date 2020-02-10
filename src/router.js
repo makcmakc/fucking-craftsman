@@ -79,6 +79,16 @@ export default new Router({
       name: 'tube-mic',
       component: () => import('./views/Projects/TubeMic.vue')
     },    
-    /* - Projects - */        
+    /* - Articles - */  
+    {
+      path: '/node-arduion',
+      name: 'node-arduion',
+      component: () => import('./views/Articles/NodeArduino.vue')
+    },
+    {
+      path: '/wails-go',
+      name: 'wails-go',
+      component: () => import('./views/Articles/WailsGo.vue')
+    },              
   ]
 })

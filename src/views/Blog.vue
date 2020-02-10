@@ -10,8 +10,8 @@
 			<!--<div class="projects" >-->
 			<div class="projects">
 
-				<router-link to="/" class="grid-item arduino-js"></router-link>	
-				<router-link to="/" class="grid-item go-wails"></router-link>
+				<router-link to="/node-arduion" class="grid-item arduino-js"></router-link>	
+				<router-link to="/wails-go" class="grid-item go-wails"></router-link>
 
 			</div>
 
