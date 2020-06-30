@@ -46,8 +46,8 @@
 				</div>
 
 				<div class="navigation">
-					<a v-if="sliderValue >= 1" class="button prev" v-on:click="moveFromIndex(index)"></a>
-					<a v-if="sliderValue !== 3" class="button next" v-on:click="moveToIndex(index)"></a>
+					<a v-if="sliderValue > 0" class="button prev" v-on:click="moveFromIndex(index)"></a>
+					<a v-if="sliderValue !== 1" class="button next" v-on:click="moveToIndex(index)"></a>
 				</div>						
 			</SliderItem>		
 		</Slider>
@@ -67,13 +67,23 @@ import Footer from '@/components/Footer'
 import { Slider, SliderItem } from "vue-easy-slider";
 
 
-const fakeData = require ('../fakeData.json')
 
 export default {
 	name: 'home',
 	data:() => ({
 		sliderValue: 0,
-		sections: fakeData.sections
+		sections: [
+			{
+				sectionTitle: "Morning Glory",
+				sectionDescription: "Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имеет о семь его великий напоивший текстов! По всей, своих, собрал.",
+				url: "/morning-glory"
+			},
+			{
+				sectionTitle: "R.E.M.I.C.O.R.E",
+				sectionDescription: "Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имеет о семь его великий напоивший текстов! По всей, своих, собрал.",
+				url: "/remicore"
+			}	
+		]		
 	}),
 	components: {
 		Menu,
@@ -89,7 +99,7 @@ export default {
 		moveFromIndex(index) {
 			this.sliderValue = --index		
 		}
-	}
+	},
 };
 </script>
 

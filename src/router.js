@@ -19,6 +19,11 @@ export default new Router({
       component: () => import('./views/MorningGlory.vue')
     },
     {
+      path: '/morning-glory/:id',
+      name: 'project',
+      component: () => import('./components/project/Article.vue')
+    },    
+    {
       path: '/login',
       name: 'login',
       component: () => import('./views/Login.vue')
@@ -29,25 +34,10 @@ export default new Router({
       component: () => import('./views/Register.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('./views/About.vue')
-    },
-    {
-      path: '/profile',
-      name: 'profile',
-      component: () => import('./views/Profile.vue')
-    }, 
-    {
       path: '/remicore',
       name: 'remicore',
       component: () => import('./views/Remicore.vue')
-    },    
-    {
-      path: '/blog',
-      name: 'blog',
-      component: () => import('./views/Blog.vue')
-    },            
+    },             
     /* - Projects - */
     {
       path: '/okko-diablo',
@@ -83,12 +73,12 @@ export default new Router({
     {
       path: '/node-arduion',
       name: 'node-arduion',
-      component: () => import('./views/Articles/NodeArduino.vue')
+      component: () => import('./views/Development/NodeArduino.vue')
     },
     {
       path: '/wails-go',
       name: 'wails-go',
-      component: () => import('./views/Articles/WailsGo.vue')
+      component: () => import('./views/Development/WailsGo.vue')
     },              
   ]
 })

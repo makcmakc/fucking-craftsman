@@ -1,27 +1,49 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
+
 import auth from './auth'
-import content from './content'
+import error from './error'
+
+
+
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    error: null
+  state: {   
+    projects: [],
+    articles: []
   },
   mutations: {
-    setError(state, error) {
-      state.error = error
+    getProjects(state) {
+      axios.get('http://localhost:3000/projects')
+        .then(response => {
+          state.projects = response.data
+        })  
     },
-    clearError(state) {
-      state.error = null
+    getArticles(state) {
+      axios.get('http://localhost:3000/articles')
+        .then(response => {
+          state.articles = response.data
+        })        
+    }
+  },   
+  actions: {
+    getProjects({commit}) {
+      commit('getProjects')
+    },
+    getArticles({commit}) {
+      commit('getArticles')
     }
   },
   getters: {
-    error: s => s.error
+    projects: s => s.projects,
+    articles: s => s.articles,
+    projectById: s => id => s.projects.find(p => p.id === id)
   },
   modules:{
     auth,
-    content
+    error
   }
 })

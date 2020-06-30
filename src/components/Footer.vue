@@ -9,12 +9,14 @@
 						<div class="languages">
 							<div 
 								class="english language" 
-								v-bind:class="{ active: !active}"
+								:class="{ active: !ru }"
+								@click="toggleLang"
 								>EN
 							</div>
 							<div 
 								class="russian language" 
-								v-bind:class="{ active: active}"
+								:class="{ active: ru }"
+								@click="toggleLang"
 								>RU
 							</div>
 						</div>
@@ -34,11 +36,13 @@
 		components: { SwitchSound },
 		data() {
 			return {
-				active: true
+				ru: true
 			}
 		},
 		methods: {
-
+			toggleLang() {	
+				this.ru = !this.ru			
+			}
 		}
 	};
 </script>

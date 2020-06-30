@@ -6,54 +6,52 @@
 
 
 <script>
-	import SineWaves from 'sine-waves'
+import SineWaves from 'sine-waves'
 
-	export default {
-		data: () => ({
-			sound: true
-		}),
-		mounted() {
-			new SineWaves({
-			el: document.getElementById('wave'),
-			speed: 3,
-			width: '50px',
-			height: '30px',
-			wavesWidth: '95%',
-			ease: 'SineInOut',
-			waves: [
-				{
-					timeModifier: 2,
-					lineWidth: 1,
-					amplitude: 12,
-					wavelength: 3,
-					segmentLength: 1
-				},
-			],
-			resizeEvent: function() {
-				let gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
-				gradient.addColorStop(0,"rgba(0, 0, 0, 0)");
-				gradient.addColorStop(0.5,"rgba(255, 255, 255, 0.5)");
-				gradient.addColorStop(1,"rgba(0, 0, 0, 0)");
+export default {
+	data: () => ({
+		sound: true
+	}),
+	mounted() {
+		new SineWaves({
+		el: document.getElementById('wave'),
+		speed: 3,
+		width: '50px',
+		height: '30px',
+		wavesWidth: '95%',
+		ease: 'SineInOut',
+		waves: [
+			{
+				timeModifier: 2,
+				lineWidth: 1,
+				amplitude: 12,
+				wavelength: 3,
+				segmentLength: 1
+			},
+		],
+		resizeEvent: function() {
+			let gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
+			gradient.addColorStop(0,"rgba(0, 0, 0, 0)");
+			gradient.addColorStop(0.5,"rgba(255, 255, 255, 0.5)");
+			gradient.addColorStop(1,"rgba(0, 0, 0, 0)");
 
-				let index = -1;
-				let length = this.waves.length;
+			let index = -1;
+			let length = this.waves.length;
 
-				while(++index < length){
-					this.waves[index].strokeStyle = gradient;
-				}
-
-				index = void 0;
-				length = void 0;
-				gradient = void 0;
+			while(++index < length){
+				this.waves[index].strokeStyle = gradient;
 			}
-			});
 
-
-		},
-		methods: {
-			OnOff() {}
+			index = void 0;
+			length = void 0;
+			gradient = void 0;
 		}
-	};
+		});
+	},
+	methods: {
+		OnOff() {}
+	}
+};
 
 </script>
 

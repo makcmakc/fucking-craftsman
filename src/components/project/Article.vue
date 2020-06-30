@@ -50,7 +50,7 @@
 
 
 <script>
-import fakeData from'@/fakeData.js'
+
   
 	export default {
     props: ['project'],
@@ -60,9 +60,9 @@ import fakeData from'@/fakeData.js'
     mounted() {
 
     },       
-    created() {
-      this.$store.dispatch('loadProjects', fakeData.projects)
-    },
+    // created() {
+    //   this.$store.dispatch('loadProjects', fakeData.projects)
+    // },
     computed: {
       projects() {
         return this.$store.getters.getProjects

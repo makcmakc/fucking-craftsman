@@ -16,6 +16,7 @@ import config from './firebase/config'
 
 import EasySlider from 'vue-easy-slider'
 
+
 Vue.use(EasySlider)
 
 
@@ -46,16 +47,14 @@ firebase.auth().onAuthStateChanged(() => {
     app = new Vue({
       router,
       store,
-     // i18n,
       render: h => h(App)
     }).$mount('#app')	
   }
 })
-
 /*
 new Vue({
   router,
   store,
-  i18n,
   render: h => h(App)
-}).$mount('#app')*/
+}).$mount('#app')
+*/

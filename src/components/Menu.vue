@@ -34,9 +34,8 @@
 			open: false,
 			links: [
 				{ title: 'Morning Glory'/*localizeFilter('morning-glory')*/, url: '/morning-glory' },
-				{ title: 'Blog'/*localizeFilter('blog')*/, url: '/blog' },
-				{ title: 'Profile'/*localizeFilter('profile')*/, url: '/login' },
 				{ title: 'R.E.M.I.C.O.R.E'/*localizeFilter('remicore)*/, url: '/remicore' },
+				{ title: 'Profile'/*localizeFilter('profile')*/, url: '/login' },
 			]
 		}),
 		methods: {
