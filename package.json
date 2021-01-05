@@ -10,7 +10,7 @@
     "json": "json-server --watch db.json"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^2.6.5",
     "css-loader": "^3.0.0",
     "firebase": "^7.5.0",
